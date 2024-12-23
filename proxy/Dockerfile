@@ -16,6 +16,7 @@ RUN mkdir -p /vol/static && \
     chmod 755 /vol/static && \
     mkdir -p /etc/nginx/ssl && \
     chmod 755 /etc/nginx/ssl && \
+    chown nginx:nginx /etc/nginx/ssl && \
     touch /etc/nginx/conf.d/default.conf && \
     chown nginx:nginx /etc/nginx/conf.d/default.conf && \
     chmod +x /run.sh
