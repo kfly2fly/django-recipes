@@ -2,11 +2,11 @@
 set -e
 
 # Ensure SSL directory ownership and permissions
-if [ -d /etc/nginx/ssl ]; then
-  echo "Setting permissions for /etc/nginx/ssl"
-  chown -R nginx:nginx /etc/nginx/ssl
-  chmod -R 440 /etc/nginx/ssl
-fi
+# if [ -d /etc/nginx/ssl ]; then
+#   echo "Setting permissions for /etc/nginx/ssl"
+#   chown -R nginx:nginx /etc/nginx/ssl
+#   chmod -R 440 /etc/nginx/ssl
+# fi
 
 # Check for SSL certificates
 if [ ! -f /etc/nginx/ssl/certificate.crt ] || [ ! -f /etc/nginx/ssl/private.key ]; then
