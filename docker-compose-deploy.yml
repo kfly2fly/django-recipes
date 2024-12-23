@@ -34,9 +34,11 @@ services:
     depends_on:
       - app
     ports:
-      - 80:8000
+      - "80:8000" # For HTTP to HTTPS redirect
+      - "443:443" # For HTTPS traffic
     volumes:
       - static-data:/vol/static
+      - ./proxy/ssl:/etc/nginx/ssl:ro # Mount SSL certificates
 
 volumes:
   postgres-data:
